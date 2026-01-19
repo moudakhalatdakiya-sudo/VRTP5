@@ -152,17 +152,17 @@ void VRTexCube::initializeVAO()
     vbo.bind();
     ibo.bind();
 
-    program.setAttributeBuffer("rv_Position", GL_FLOAT, 0, 3);
-    program.enableAttributeArray("rv_Position");
+    program.setAttributeBuffer("vr_Position", GL_FLOAT, 0, 3);
+    program.enableAttributeArray("vr_Position");
 
-    program.setAttributeBuffer("rv_Color", GL_FLOAT, sizeof(QVector3D) * numVertices, 3);
-    program.enableAttributeArray("rv_Color");
+    program.setAttributeBuffer("vr_Color", GL_FLOAT, sizeof(QVector3D) * numVertices, 3);
+    program.enableAttributeArray("vr_Color");
 
-    program.setAttributeBuffer("rv_TexCoord", GL_FLOAT, sizeof(QVector3D) * 48, 3);
-    program.enableAttributeArray("rv_TexCoord");
+    program.setAttributeBuffer("vr_TexCoord", GL_FLOAT, sizeof(QVector3D) * 48, 3);
+    program.enableAttributeArray("vr_TexCoord");
 
-    program.setAttributeBuffer("rv_Normal", GL_FLOAT, sizeof(QVector3D) * 72, 3);
-    program.enableAttributeArray("rv_Normal");
+    program.setAttributeBuffer("vr_Normal", GL_FLOAT, sizeof(QVector3D) * 72, 3);
+    program.enableAttributeArray("vr_Normal");
 
     vao.release();
     program.release();
