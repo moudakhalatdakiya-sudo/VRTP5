@@ -1,0 +1,968 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>905</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>0</height>
+   </size>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QHBoxLayout" name="horizontalLayout_2">
+    <item>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item>
+       <widget class="VRWidget" name="widgetVR">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>0</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>600</width>
+          <height>600</height>
+         </size>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QVBoxLayout" name="verticalLayout">
+        <item>
+         <widget class="QPushButton" name="animationButton">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Animation Objets </string>
+          </property>
+          <property name="checkable">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_3">
+          <property name="text">
+           <string>Rebonds planète</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_4">
+          <property name="text">
+           <string>Animer la lumière</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_5">
+          <property name="text">
+           <string>Cibler la caméra sur la planète</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_6">
+          <property name="text">
+           <string>Se déplacer avec la lumière</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="Line" name="line_2">
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Orientation::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QLabel" name="label_2">
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+            <italic>true</italic>
+           </font>
+          </property>
+          <property name="text">
+           <string>Ouverture focale</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QDial" name="fov">
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="minimum">
+           <number>10</number>
+          </property>
+          <property name="maximum">
+           <number>120</number>
+          </property>
+          <property name="singleStep">
+           <number>5</number>
+          </property>
+          <property name="value">
+           <number>45</number>
+          </property>
+          <property name="notchesVisible">
+           <bool>true</bool>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QCheckBox" name="checkBox_7">
+          <property name="text">
+           <string>Camera Stereo</string>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QScrollArea" name="scrollArea">
+          <property name="maximumSize">
+           <size>
+            <width>350</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="widgetResizable">
+           <bool>true</bool>
+          </property>
+          <widget class="QWidget" name="scrollAreaWidgetContents_2">
+           <property name="geometry">
+            <rect>
+             <x>0</x>
+             <y>0</y>
+             <width>268</width>
+             <height>780</height>
+            </rect>
+           </property>
+           <layout class="QVBoxLayout" name="verticalLayout_3">
+            <item>
+             <widget class="QGroupBox" name="NouveauCube">
+              <property name="title">
+               <string>Nouveau corps</string>
+              </property>
+              <layout class="QFormLayout" name="formLayout">
+               <item row="4" column="0">
+ 		<widget class="QCheckBox" name="checkBox">
+  		<property name="text">
+   		   <string>placement aléatoire</string>
+  		</property>
+ 		</widget>
+		</item>
+
+               <item row="1" column="0" colspan="2">
+                <widget class="QGroupBox" name="horizontalGroupBox">
+                 <property name="sizePolicy">
+                  <sizepolicy hsizetype="Expanding" vsizetype="Preferred">
+                   <horstretch>0</horstretch>
+                   <verstretch>0</verstretch>
+                  </sizepolicy>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_5">
+                  <item>
+                   <widget class="QLabel" name="labelX">
+                    <property name="text">
+                     <string>x</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valeurX"/>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelLacet">
+                    <property name="text">
+                     <string>lacet</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valeurLacet"/>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="2" column="0" colspan="2">
+                <widget class="QGroupBox" name="horizontalGroupBox">
+                 <layout class="QHBoxLayout" name="horizontalLayout_6">
+                  <item>
+                   <widget class="QLabel" name="labelY">
+                    <property name="text">
+                     <string>y</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valeurY"/>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelRoulis">
+                    <property name="text">
+                     <string>roulis</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valeurRoulis"/>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="3" column="0" colspan="2">
+                <widget class="QGroupBox" name="horizontalGroupBox">
+                 <layout class="QHBoxLayout" name="horizontalLayout_7">
+                  <item>
+                   <widget class="QLabel" name="labelZ">
+                    <property name="text">
+                     <string>z</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valeurZ"/>
+                  </item>
+                  <item>
+                   <widget class="QLabel" name="labelTangage">
+                    <property name="text">
+                     <string>tangage</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="valeurTangage"/>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item row="0" column="0" colspan="2">
+                <widget class="QComboBox" name="comboCorps">
+                 <item>
+                  <property name="text">
+                   <string>Cube</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Cube Speculaire</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Tore Speculaire</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Sphere Speculaire</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Dé</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Cube texturé</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Sphere</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Planete</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Tore</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Plan</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="5" column="0" colspan="2">
+                <widget class="QPushButton" name="boutonCreeCube">
+                 <property name="text">
+                  <string>Créer </string>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line_3">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="horizontalGroupBox">
+              <layout class="QHBoxLayout" name="horizontalLayout_4">
+               <item>
+                <widget class="QLabel" name="label_3">
+                 <property name="text">
+                  <string>Skybox Image</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QComboBox" name="comboSkybox">
+                 <item>
+                  <property name="text">
+                   <string>Ciel</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Plage</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Montagne</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="formGroupBox">
+              <property name="minimumSize">
+               <size>
+                <width>0</width>
+                <height>270</height>
+               </size>
+              </property>
+              <property name="styleSheet">
+               <string notr="true">background-color: rgb(128, 128, 128);
+border: 1px solid grey;
+color : rgb(255,255,255);
+border-radius: 5px;</string>
+              </property>
+              <property name="title">
+               <string>Source lumineuse</string>
+              </property>
+              <layout class="QVBoxLayout" name="verticalLayout_2">
+               <item>
+                <spacer name="verticalSpacer_2">
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Vertical</enum>
+                 </property>
+                 <property name="sizeType">
+                  <enum>QSizePolicy::Policy::Fixed</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>10</width>
+                   <height>10</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item>
+                <widget class="QGroupBox" name="horizontalGroupBox">
+                 <property name="minimumSize">
+                  <size>
+                   <width>0</width>
+                   <height>50</height>
+                  </size>
+                 </property>
+                 <layout class="QHBoxLayout" name="horizontalLayout_3">
+                  <item>
+                   <widget class="QDoubleSpinBox" name="xLight">
+                    <property name="styleSheet">
+                     <string notr="true">
+background-color: rgb(100,100,100);
+border: 1px solid black;
+border-radius: 5px;</string>
+                    </property>
+                    <property name="minimum">
+                     <double>-100.000000000000000</double>
+                    </property>
+                    <property name="maximum">
+                     <double>100.000000000000000</double>
+                    </property>
+                    <property name="singleStep">
+                     <double>1.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>10.000000000000000</double>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="yLight">
+                    <property name="styleSheet">
+                     <string notr="true">
+background-color: rgb(100,100,100);
+border: 1px solid black;
+border-radius: 5px;</string>
+                    </property>
+                    <property name="minimum">
+                     <double>-100.000000000000000</double>
+                    </property>
+                    <property name="maximum">
+                     <double>100.000000000000000</double>
+                    </property>
+                   </widget>
+                  </item>
+                  <item>
+                   <widget class="QDoubleSpinBox" name="zLight">
+                    <property name="styleSheet">
+                     <string notr="true">
+background-color: rgb(100,100,100);
+border: 1px solid black;
+border-radius: 5px;</string>
+                    </property>
+                    <property name="minimum">
+                     <double>-100.000000000000000</double>
+                    </property>
+                    <property name="maximum">
+                     <double>100.000000000000000</double>
+                    </property>
+                    <property name="value">
+                     <double>10.000000000000000</double>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="ambientButton">
+                 <property name="styleSheet">
+                  <string notr="true">
+background-color: rgb(255,255,255);
+border: 1px solid black;
+color: rgb(0,0,0);
+border-radius: 5px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Couleur ambiante</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="diffuseButton">
+                 <property name="styleSheet">
+                  <string notr="true">
+background-color: rgb(255,255, 255);
+border: 1px solid black;
+color: rgb(0,0,0);
+border-radius: 5px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Couleur diffuse</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QPushButton" name="specularButton">
+                 <property name="styleSheet">
+                  <string notr="true">
+background-color: rgb(255,255,255);
+border: 1px solid black;
+color: rgb(0,0,0);
+border-radius: 5px;</string>
+                 </property>
+                 <property name="text">
+                  <string>Couleur speculaire</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QLabel" name="label_4">
+                 <property name="styleSheet">
+                  <string notr="true"/>
+                 </property>
+                 <property name="text">
+                  <string>Coefficient de réflection spéculaire</string>
+                 </property>
+                </widget>
+               </item>
+               <item>
+                <widget class="QSlider" name="specCoeff">
+                 <property name="value">
+                  <number>20</number>
+                 </property>
+                 <property name="orientation">
+                  <enum>Qt::Orientation::Horizontal</enum>
+                 </property>
+                 <property name="tickPosition">
+                  <enum>QSlider::TickPosition::TicksBelow</enum>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+            <item>
+             <widget class="Line" name="line">
+              <property name="orientation">
+               <enum>Qt::Orientation::Horizontal</enum>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QLabel" name="image">
+              <property name="sizePolicy">
+               <sizepolicy hsizetype="Ignored" vsizetype="Preferred">
+                <horstretch>0</horstretch>
+                <verstretch>0</verstretch>
+               </sizepolicy>
+              </property>
+              <property name="minimumSize">
+               <size>
+                <width>130</width>
+                <height>150</height>
+               </size>
+              </property>
+              <property name="text">
+               <string/>
+              </property>
+              <property name="pixmap">
+               <pixmap resource="VRResources.qrc">:/textures/wood.png</pixmap>
+              </property>
+              <property name="scaledContents">
+               <bool>true</bool>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QCheckBox" name="checkBox_2">
+              <property name="text">
+               <string>Save Picture </string>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QPushButton" name="takePicture">
+              <property name="text">
+               <string>Take a picture</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>900</width>
+     <height>17</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>VRWidget</class>
+   <extends>QOpenGLWidget</extends>
+   <header>vrwidget.h</header>
+   <slots>
+    <slot>startAnimation()</slot>
+    <slot>changeFov(int)</slot>
+    <slot>changeOpacity(int)</slot>
+    <slot>changeWireframe()</slot>
+    <slot>changeCulling()</slot>
+    <slot>changeSize(int)</slot>
+    <slot>changeSaturation(int)</slot>
+    <slot>changeXLight(double)</slot>
+    <slot>changeYLight(double)</slot>
+    <slot>changeZLight(double)</slot>
+    <slot>changeSpecCoeff(int)</slot>
+    <slot>startAnimationLight()</slot>
+    <slot>startCameraAnimation()</slot>
+    <slot>startAnimationCamera()</slot>
+    <slot>changeBounce()</slot>
+    <slot>targetOnPlanet()</slot>
+    <slot>changeStereo()</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="VRResources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>animationButton</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetVR</receiver>
+   <slot>startAnimation()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>635</x>
+     <y>54</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>411</x>
+     <y>304</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>fov</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widgetVR</receiver>
+   <slot>changeFov(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>886</x>
+     <y>343</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>411</x>
+     <y>376</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>boutonCreeCube</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>createBody()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>682</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>714</x>
+     <y>438</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setAleatoire()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>646</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>715</x>
+     <y>277</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboSkybox</sender>
+   <signal>currentTextChanged(QString)</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeSkyboxImage(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>748</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>655</x>
+     <y>555</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>ambientButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeAmbientLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>877</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>891</x>
+     <y>777</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>diffuseButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeDiffuseLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>906</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>892</x>
+     <y>726</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>specularButton</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>changeSpecularLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>935</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>890</x>
+     <y>686</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>xLight</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>widgetVR</receiver>
+   <slot>changeXLight(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>728</x>
+     <y>834</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>595</x>
+     <y>683</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>yLight</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>widgetVR</receiver>
+   <slot>changeYLight(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>808</x>
+     <y>834</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>587</x>
+     <y>712</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>zLight</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>widgetVR</receiver>
+   <slot>changeZLight(double)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>888</x>
+     <y>834</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>539</x>
+     <y>732</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>specCoeff</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>widgetVR</receiver>
+   <slot>changeSpecCoeff(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>900</x>
+     <y>1025</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>542</x>
+     <y>818</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>takePicture</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>takePicture()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>912</x>
+     <y>1271</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>628</x>
+     <y>867</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_2</sender>
+   <signal>clicked()</signal>
+   <receiver>MainWindow</receiver>
+   <slot>setSaving()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>912</x>
+     <y>1235</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>632</x>
+     <y>869</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_3</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetVR</receiver>
+   <slot>changeBounce()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>673</x>
+     <y>94</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>556</x>
+     <y>143</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_4</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetVR</receiver>
+   <slot>startAnimationLight()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>712</x>
+     <y>114</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>582</x>
+     <y>184</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_5</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetVR</receiver>
+   <slot>targetOnPlanet()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>741</x>
+     <y>159</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>566</x>
+     <y>237</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_6</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetVR</receiver>
+   <slot>startAnimationCamera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>800</x>
+     <y>192</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>538</x>
+     <y>216</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkBox_7</sender>
+   <signal>clicked()</signal>
+   <receiver>widgetVR</receiver>
+   <slot>changeStereo()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>682</x>
+     <y>367</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>529</x>
+     <y>480</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+ <slots>
+  <slot>createCube()</slot>
+  <slot>aleatoire(bool)</slot>
+  <slot>setAleatoire()</slot>
+  <slot>createBody()</slot>
+  <slot>changeSkyboxImage(QString)</slot>
+  <slot>changeAmbientLight()</slot>
+  <slot>changeDiffuseLight()</slot>
+  <slot>changeSpecularLight()</slot>
+  <slot>changeXLight()</slot>
+  <slot>changeYLight()</slot>
+  <slot>changeZLight()</slot>
+  <slot>changeSpecCoeff()</slot>
+  <slot>startAnimationLight()</slot>
+  <slot>takePicture()</slot>
+  <slot>setSaving()</slot>
+ </slots>
+</ui>
